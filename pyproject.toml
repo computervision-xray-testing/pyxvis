@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "pyxvis"
+version = "0.1.0a3"
+description = "Python package for Xvis toolbox"
+authors = ["Christian Pieringer <8143906+cpieringer@users.noreply.github.com>", "Domingo Mery <dmery@ing.puc.cl>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+numpy = "<1.19"
+matplotlib = "^3.3.2"
+scipy = "^1.5.2"
+pyqt5 = "^5.15.1"
+pybalu = "^0.2.9"
+opencv-python = "3.4.2.*"
+opencv-contrib-python = "3.4.2.*"
+tensorflow = "^2.3.1"
+scikit-learn = "^0.23.2"
+scikit-image = "^0.17.2"
+pandas = "^1.1.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
