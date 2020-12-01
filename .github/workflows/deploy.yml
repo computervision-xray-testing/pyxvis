@@ -19,7 +19,7 @@ jobs:
   build:
     strategy:
       matrix:
-        python-version: [3.6]
+        python-version: [3.6.9]
         poetry-version: [1.1.4]
     
     # The type of runner that the job will run on
