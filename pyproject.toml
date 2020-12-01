@@ -22,7 +22,7 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">=3.6.1, <4.0"
 numpy = "<1.19"
 matplotlib = "^3.3.2"
 scipy = "^1.5.2"
