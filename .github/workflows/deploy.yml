@@ -58,7 +58,9 @@ jobs:
   
       - name: Configure poetry
         shell: bash
-        run: poetry config virtualenvs.in-project true
+        run: |
+          poetry config virtualenvs.in-project true
+          poetry config pypi-token.pypi "${{ secrets.GITHUBDEPLOY }}"
         
       - name: View poetry --help
         run: poetry --help
@@ -73,4 +75,4 @@ jobs:
 
       - name: Publish on PyPI
         shell: bash
-        run: poetry publish --password=${{ secrets.GITHUBDEPLOY }}
+        run: poetry publish
