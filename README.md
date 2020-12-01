@@ -1,3 +1,5 @@
+[![PyPI](https://img.shields.io/pypi/v/hypermodern-python.svg)](https://pypi.org/project/hypermodern-python/)
+
 # py-XVis
 
 Python implementation for XVis Toolbox release with the book Computer Vision for X-Ray Testing. Originally implemented 
