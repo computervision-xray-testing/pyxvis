@@ -15,7 +15,7 @@ from numpy import genfromtxt, loadtxt, array
 
 
 # Constants
-GDXRAY_PATH = _path.join(_path.expanduser('~'), 'datasets', 'xray-imaging')
+GDXRAY_PATH = _path.join(_path.expanduser('~'), 'GDXray')
 
 
 class DatasetBase:
@@ -37,15 +37,17 @@ class DatasetBase:
         else:
             root_path = dataset_path
 
+        self.root_path = root_path
         self.group_name = group_name
         self.group_prefix = group_prefix
-        self.dataset_path = _path.join(root_path, self.group_name)
+        self.dataset_path = _path.join(self.root_path, self.group_name)
 
     def __repr__(self):
         class_info = "Class Info:\n"
         class_info += f"Group: {self.group_name}\n"
         class_info += f"Prefix: {self.group_prefix}\n"
         class_info += f"Path: {self.dataset_path}\n"
+        class_info += f"Root_path: {self.root_path}\n"
         return class_info
 
     def describe(self):
@@ -53,7 +55,6 @@ class DatasetBase:
         Aggregate dataset information, such as, series names, size, number of images, etc.
 
         Returns: a python dictionary that aggregates the information.
-
         """
         # Create a dictionary for count items in each series
         table = {'series': 0, 'images': 0, 'size': 0}
@@ -403,20 +404,16 @@ def load_gt(img_set, series, k, gt_filename='ground_truth.txt'):
 
 if __name__ == '__main__':
 
+    from pyxvis.io import gdxraydb
+
     # Testing the class instantiation
     set_names = ['Castings', 'Welds', 'Nature', 'Settings', 'Baggages']
-    set_names = ['Baggages']
+
     for set_name in set_names:
         image_set = load_image_set(set_name)
         print(image_set)
         print(image_set.describe())
 
     # Testing loading ground truth
-    image_set = load_image_set('Castings')
-    try:
-        gt = load_gt(image_set, 2, 1)
-    except IOError as err:
-        print(err)
-        gt = None
-
-    print(gt)
+    image_set = gdxraydb.Baggages()
+    img = image_set.load_image(2, 4)

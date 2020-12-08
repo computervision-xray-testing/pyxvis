@@ -4,9 +4,9 @@ from pyxvis.io.visualization import show_xray_image, show_color_array, show_imag
 image_set = gdxraydb.Baggages()
 
 # Input image
-img = image_set.load_image(2, 4) 
+img = image_set.load_image(2, 4)
 
-# Crop a region of interes within the image
+# Crop a region of interest within the image
 roi = img[250:399, 340:529]
 
 # Display the input image using customized color map
