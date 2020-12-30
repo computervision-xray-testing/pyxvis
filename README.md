@@ -35,7 +35,7 @@ The package is part of the Python Index (PyPi). Installation is available by pip
 All examples in the Book have been implemented in Jupyter Notebooks tha run on Google Colab.
 
 
-## Chapter 01: X-ray Testing [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1meevAFZkZ_0SUBPYqo_nl7grBcqfeVMP?usp=sharing)
+## Chapter 01: X-ray Testing [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YQ24KY_Mg-LNX7AgxVnFJeUHSxu1ElD4?usp=sharing)
 
 * Example 1.1: Displaying X-ray images
 * Example 1.2: Dual Energy
