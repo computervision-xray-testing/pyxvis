@@ -42,7 +42,7 @@ All examples in the Book have been implemented in Jupyter Notebooks tha run on G
 * Example 1.3: Help of PyXvis functions
 
 
-## Chapter 02: Images for X-ray Testing [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MDc5wbH11I5PV18l5ZSt92yugz0eHi4W?usp=sharing)
+## Chapter 02: Images for X-ray Testing [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1l4FoZ8-WzeQW4JskRguKH6Y4OZoysZbY?usp=sharing)
 
 * Example 2.1: Displaying an X-ray image of GDXray
 
