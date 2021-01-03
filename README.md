@@ -60,7 +60,7 @@ All examples in the Book have been implemented in Jupyter Notebooks tha run on G
 * Example 3.9: 3D reconstruction
 
 
-## Chapter 04: X-ray Image Processing [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1edbph3qfb2PfKOWPGUWUsC0DeX8muO9U?usp=sharing)
+## Chapter 04: X-ray Image Processing [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1LVO02lJy23HtQ1WACwlwHS3lMdCM6JDy?usp=sharing)
 
 * Example 4.1: Aritmetic average of images
 * Example 4.2: Contrast enhancement
