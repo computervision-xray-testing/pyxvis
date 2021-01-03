@@ -47,7 +47,7 @@ All examples in the Book have been implemented in Jupyter Notebooks tha run on G
 * Example 2.1: Displaying an X-ray image of GDXray
 
 
-## Chapter 03: Geometry in X-ray Testing [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/14CgSCGcpm4Wc4SbVB70iBx6Cw6rXoZAq?usp=sharing)
+## Chapter 03: Geometry in X-ray Testing [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bN2jI_DLviKk7ch3lxiZu-lHF1z1cOe_?usp=sharing)
 
 * Example 3.1: Euclidean 2D transformation
 * Example 3.2: Euclidean 3D transformation
