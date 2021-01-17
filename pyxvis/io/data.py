@@ -1,19 +1,35 @@
 import numpy as np
 from scipy.io import loadmat
-from keras.utils.np_utils import to_categorical
 from sklearn.model_selection import train_test_split
 
+# from tensorflow.keras.utils.np_utils import to_categorical
+from tensorflow.keras.utils import to_categorical
 
-def load_features(prefix,full=0,categorical=0):
-    X  = np.load(prefix+'_Xtrain.npy')            # training samples
-    Xt = np.load(prefix+'_Xtest.npy')             # testing samples
-    d  = np.ravel(np.load(prefix+'_dtrain.npy'))  # training labels
-    dt = np.ravel(np.load(prefix+'_dtest.npy'))   # testing labels
-    if full==0:
-        print('Training data: '+str(X.shape[0]) +' samples with '+str(X.shape[1]) +' features')
-        print(' Testing data: '+str(Xt.shape[0])+' samples with '+str(Xt.shape[1])+' features')
-        print('      Classes: '+str(int(np.min(d)))+'...'+str(int(np.max(d))))
-        if categorical==1:
+
+def load_features(prefix, full=0, categorical=0):
+    """
+    Loads feature from path.
+
+    Args:
+        prefix (string): source path of the features data.
+        full (int):
+        categorical (int):
+
+    Returns:
+        X (np.array): the set of features.
+        Y, d (np.array): the vector of labels.
+    """
+    X = np.load(prefix + '_Xtrain.npy')             # load training samples
+    Xt = np.load(prefix + '_Xtest.npy')             # load testing samples
+    d = np.ravel(np.load(prefix + '_dtrain.npy'))   # load training labels
+    dt = np.ravel(np.load(prefix + '_dtest.npy'))   # load testing labels
+
+    if full == 0:
+        print('Training data: ' + str(X.shape[0]) + ' samples with ' + str(X.shape[1]) + ' features')
+        print(' Testing data: ' + str(Xt.shape[0]) + ' samples with ' + str(Xt.shape[1]) + ' features')
+        print('      Classes: ' + str(int(np.min(d))) + '...' + str(int(np.max(d))))
+
+        if categorical == 1:
             dmin = np.min(d)
             Ytrain = np.transpose(to_categorical(d-dmin))
             Ytest  = np.transpose(to_categorical(dt-dmin))
