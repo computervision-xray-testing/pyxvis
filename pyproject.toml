@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyxvis"
-version = "0.1.0a4"
+version = "0.1.0a7"
 description = "Python package for Xvis toolbox"
 authors = ["Christian Pieringer <8143906+cpieringer@users.noreply.github.com>", "Domingo Mery <dmery@ing.puc.cl>"]
 license = "GPL-3.0-or-later"
