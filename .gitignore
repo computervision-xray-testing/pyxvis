@@ -115,3 +115,6 @@ pyxvis/.DS_Store
 
 # VSCode
 .vscode/*
+
+# Pyenv
+.python-version

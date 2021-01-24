@@ -39,7 +39,8 @@ seaborn = "^0.11.1"
 
 [tool.poetry.dev-dependencies]
 jupyter = "^1.0.0"
+pytest = "^6.2.1"
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry>=0.12.10"]
 build-backend = "poetry.masonry.api"
