@@ -118,3 +118,6 @@ pyxvis/.DS_Store
 
 # Pyenv
 .python-version
+
+# Some test dirs
+.notebooks
