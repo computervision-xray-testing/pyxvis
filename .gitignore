@@ -120,4 +120,5 @@ pyxvis/.DS_Store
 .python-version
 
 # Some test dirs
-.notebooks
+/notebooks/*
+*/.ipynb_checkpoints
