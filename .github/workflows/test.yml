@@ -1,0 +1,62 @@
+# This is a basic workflow to help you get started with Actions
+
+name: TestCommit
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest] #, macos-latest, windows-latest]
+        python-version: [3.5, 3.6.9, 3.7, 3.8]
+        poetry-version: [1.1.4]
+    
+    # The type of runner that the job will run on
+    runs-on: ${{ matrix.os }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version:  ${{ matrix.python-version }}
+
+      # Runs a set of commands using the runners shell
+      - name: Install poetry ${{ matrix.poetryversion }}
+        run: |
+         python -m ensurepip
+         python -m pip install --upgrade pip
+         python -m pip install poetry==${{ matrix.poetry-version }}
+
+      - name: Configure poetry
+        shell: bash
+        run: |
+          poetry config virtualenvs.in-project true
+          poetry config pypi-token.pypi "${{ secrets.GITHUBDEPLOY }}"
+        
+      - name: View poetry --help
+        run: poetry --help
+        
+      #- name: Install dependencies
+      #  shell: bash
+      #  run: poetry install
+
+      - name: Build package
+        shell: bash
+        run: poetry build

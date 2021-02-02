@@ -116,9 +116,6 @@ pyxvis/.DS_Store
 # VSCode
 .vscode/*
 
-# Pyenv
-.python-version
-
 # Some test dirs
 /notebooks/*
 */.ipynb_checkpoints
