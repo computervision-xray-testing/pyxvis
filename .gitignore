@@ -119,3 +119,4 @@ pyxvis/.DS_Store
 # Some test dirs
 /notebooks/*
 */.ipynb_checkpoints
+/listings/chapter_06/*.npy
