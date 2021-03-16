@@ -85,7 +85,7 @@ All examples in the Book have been implemented in Jupyter Notebooks tha run on G
 * Example 5.5: Defect detection usin contrast features
 * Example 5.6: Crossing line profiles (CLP)
 * Example 5.7: SIFT
-* Example 5.8: feature se;ection
+* Example 5.8: Feature selection
 * Example 5.9: Example using intenisty features
 * Example 5.10: Example using geometric features
 
