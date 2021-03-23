@@ -337,7 +337,7 @@ def xgdx_stats(root_dir=None):
     """
 
     if not root_dir:
-        root_dir = GDXRAT_PATH
+        root_dir = GDXRAY_PATH
 
     # Check if the directory exist. If not, raise a ValueError exception.
     if not _path.exists(root_dir):
